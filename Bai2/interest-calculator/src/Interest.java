@@ -24,5 +24,6 @@ public class Interest {
 
         System.out.println("Total of interest: " + totalInterest);
 
+        input.close();
     }
 }

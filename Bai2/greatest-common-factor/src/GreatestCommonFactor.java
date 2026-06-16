@@ -4,11 +4,11 @@ public class GreatestCommonFactor {
     public static void main(String[] args) {
         int a;
         int b;
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a: ");
-        a = input.nextInt();
+        a = scanner.nextInt();
         System.out.println("Enter b: ");
-        b = input.nextInt();
+        b = scanner.nextInt();
 
         a = Math.abs(a);
         b = Math.abs(b);
@@ -26,5 +26,6 @@ public class GreatestCommonFactor {
 
         System.out.println("Greatest common factor: " + a);
 
+        scanner.close();
     }
 }

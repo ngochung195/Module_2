@@ -1,0 +1,1 @@
+Prompt 1: Kiểm tra code tối ưu chưa?
