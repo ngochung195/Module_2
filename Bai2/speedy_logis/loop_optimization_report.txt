@@ -1,0 +1,5 @@
+1. Đưa việc khởi tạo đối tượng nặng ra ngoài vòng lặp
+
+2. Đưa việc gọi hàm calculateHeavyTaxRate() tính toán nặng ra trước vòng lặp
+
+3. Bổ sung điều kiện dừng sớm khi vượt ngân sách.
