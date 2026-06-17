@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Module2.iml" filepath="$PROJECT_DIR$/Module2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai1/body-mass-index/body-mass-index.iml" filepath="$PROJECT_DIR$/Bai1/body-mass-index/body-mass-index.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai1/chao/chao.iml" filepath="$PROJECT_DIR$/Bai1/chao/chao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai2/check-prime/check-prime.iml" filepath="$PROJECT_DIR$/Bai2/check-prime/check-prime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai1/chuyen-doi-tien/chuyen-doi-tien.iml" filepath="$PROJECT_DIR$/Bai1/chuyen-doi-tien/chuyen-doi-tien.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai1/day-of-month/day-of-month.iml" filepath="$PROJECT_DIR$/Bai1/day-of-month/day-of-month.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai1/doc-so/doc-so.iml" filepath="$PROJECT_DIR$/Bai1/doc-so/doc-so.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai2/draw-geometry/draw-geometry.iml" filepath="$PROJECT_DIR$/Bai2/draw-geometry/draw-geometry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai2/greatest-common-factor/greatest-common-factor.iml" filepath="$PROJECT_DIR$/Bai2/greatest-common-factor/greatest-common-factor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai2/interest-calculator/interest-calculator.iml" filepath="$PROJECT_DIR$/Bai2/interest-calculator/interest-calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai1/leap-year-calculator/leap-year-calculator.iml" filepath="$PROJECT_DIR$/Bai1/leap-year-calculator/leap-year-calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai1/mega-cine/mega-cine.iml" filepath="$PROJECT_DIR$/Bai1/mega-cine/mega-cine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai1/pay-fails/pay-fails.iml" filepath="$PROJECT_DIR$/Bai1/pay-fails/pay-fails.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai2/prime/prime.iml" filepath="$PROJECT_DIR$/Bai2/prime/prime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai2/security-scanner/security-scanner.iml" filepath="$PROJECT_DIR$/Bai2/security-scanner/security-scanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bai2/speedy_logis/speedy_logis.iml" filepath="$PROJECT_DIR$/Bai2/speedy_logis/speedy_logis.iml" />
+    </modules>
+  </component>
+</project>
