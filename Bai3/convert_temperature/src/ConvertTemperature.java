@@ -35,6 +35,8 @@ public class ConvertTemperature {
                     System.exit(0);
             }
         } while (choice != 0);
+
+        input.close();
     }
 
     public static double celsiusToFahrenheit(double celsius) {
