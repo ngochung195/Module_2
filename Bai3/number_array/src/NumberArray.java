@@ -37,5 +37,6 @@ public class NumberArray {
         }
         System.out.println("\nThe largest property value in the list is " + max + " ,at position " + index);
 
+        scanner.close();
     }
 }
