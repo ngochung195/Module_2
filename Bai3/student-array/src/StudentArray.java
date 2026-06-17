@@ -21,5 +21,6 @@ public class StudentArray {
             System.out.println("Not found" + input_name + " in the list.");
         }
 
+        scanner.close();
     }
 }
