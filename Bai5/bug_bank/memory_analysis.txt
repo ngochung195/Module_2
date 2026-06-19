@@ -1,0 +1,5 @@
+1. Dùng static cho những thuộc tính hoặc phương thức mang tính chất toàn cục, 
+dùng chung cho mọi đối tượng và không phụ thuộc vào trạng thái riêng của bất kỳ cá nhân nào.
+
+2. Dùng instance cho những dữ liệu định danh hoặc phản ánh trạng thái riêng biệt, 
+bảo mật của từng đối tượng như: tên chủ tài khoản, số dư, hay mật khẩu.

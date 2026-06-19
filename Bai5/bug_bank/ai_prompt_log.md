@@ -1,0 +1,1 @@
+Prompt 1: Code cũ đang khai báo nhầm lẫn giữa static và instance gây sai lệch trạng thái và lãng phí bộ nhớ. Đây là code tôi đã sửa còn lỗi ở đâu không?
