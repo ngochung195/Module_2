@@ -1,0 +1,6 @@
+Đoạn code legacy in ra kết quả 15000 là do cơ chế liên kết tĩnh của Overloading trong Java. 
+Khi biên dịch, Compiler chỉ căn cứ vào kiểu khai báo của biến (bên trái dấu `=`) là `Order` 
+để chọn hàm xử lý, thay vì nhìn vào đối tượng thực tế trong bộ nhớ là `ExpressOrder`. 
+Do đó, khi gọi `calc.calculate(o2)`, Java bị "mù" trước đối tượng hỏa tốc và tự động kích hoạt 
+hàm tính cước tiêu chuẩn. Điều này khiến tính đa hình bị vô hiệu hóa hoàn toàn khi quản lý 
+các đơn hàng dưới dạng một mảng chung.

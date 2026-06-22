@@ -1,0 +1,3 @@
+Prompt 1: Khi tôi chuyển hàm calculateFee() vào bên trong class Order và để trống ruột, tôi nên dùng từ khóa 'abstract' hay cung cấp một logic mặc định? Ưu nhược điểm của 2 cách này đối với khả năng mở rộng là gì?
+
+Prompt 2: Annotation @Override trong Java có bắt buộc không? Nếu tôi gõ sai tên hàm thành calculateFeee() ở lớp con mà không có chữ @Override, trình biên dịch sẽ hiểu lầm đó là chiến lược Overloading hay một phương thức hoàn toàn mới?
