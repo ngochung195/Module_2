@@ -1,0 +1,3 @@
+Prompt 1: Dưới đây là đoạn code tôi đang dùng để tính chiết khấu. Bạn hãy đánh giá xem tên các biến và phương thức của tôi đã tuân thủ đúng Clean Code chưa, có cần phải làm rõ nghĩa hơn không?
+
+Prompt 2: Hãy giúp tôi tạo một bảng các trường hợp kiểm thử (Test Cases) có độ bao phủ cao cho logic kinh doanh trong đoạn code tính cước trên (bao gồm cả khách VIP, khách thường, giá trị nhỏ, giá trị lớn, lỗi đầu vào)
