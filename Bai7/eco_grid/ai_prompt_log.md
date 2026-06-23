@@ -1,0 +1,1 @@
+Prompt: Hãy tạo giúp tôi một kịch bản test case bằng Java để chứng minh rằng tôi có thể quản lý tập trung toàn bộ các thực thể kết nối mạng thông qua đa hình với kiểu dữ liệu Interface.

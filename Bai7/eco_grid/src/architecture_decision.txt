@@ -1,0 +1,9 @@
+Abstract Class được chọn cho thiết bị vật lý vì nó cho phép các lớp con tái sử dụng và chia sẻ chung 
+các thuộc tính trạng thái cốt lõi (id, voltage, temperature) để tránh lặp code.
+
+Interface được lựa chọn cho dịch vụ mạng vì kết nối Cloud là một năng lực/hành vi linh hoạt, 
+giúp các thực thể có bản chất hoàn toàn khác nhau (cả phần cứng lẫn phần mềm) đều có thể tham gia 
+mà không bị ép buộc kế thừa chung một cấu trúc vật lý.
+
+Sự kết hợp này tuân thủ nghiêm ngặt Nguyên lý phân tách Interface (ISP), giúp hệ thống EcoGrid cô lập hoàn toàn dữ liệu rác, 
+dễ dàng mở rộng và quản lý tập trung thông qua tính đa hình.
