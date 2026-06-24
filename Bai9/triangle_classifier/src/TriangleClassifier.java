@@ -1,21 +1,38 @@
 public class TriangleClassifier {
-    public static String getTriangleClassifier(int a, int b, int c) {
-        if (a < 0 || b < 0 || c < 0) {
+
+    public static String getTriangleClassifier(int sideA, int sideB, int sideC) {
+
+        if (isInvalidTriangle(sideA, sideB, sideC)) {
             return "Không phải là tam giác";
         }
 
-        if (a + b <= c || a + c <= b || b + c <= a) {
-            return "Không phải là tam giác";
-        }
-
-        if (a == b && b == c) {
+        if (isEquilateral(sideA, sideB, sideC)) {
             return "Tam giác đều";
         }
 
-        if (a == b || a == c || b == c) {
+        if (isIsosceles(sideA, sideB, sideC)) {
             return "Tam giác cân";
         }
 
         return "Tam giác thường";
+    }
+
+    private static boolean isInvalidTriangle(int sideA, int sideB, int sideC) {
+        return sideA <= 0 || sideB <= 0 || sideC <= 0
+                || !isValidTriangle(sideA, sideB, sideC);
+    }
+
+    private static boolean isValidTriangle(int sideA, int sideB, int sideC) {
+        return sideA + sideB > sideC
+                && sideA + sideC > sideB
+                && sideB + sideC > sideA;
+    }
+
+    private static boolean isEquilateral(int sideA, int sideB, int sideC) {
+        return sideA == sideB && sideB == sideC;
+    }
+
+    private static boolean isIsosceles(int sideA, int sideB, int sideC) {
+        return sideA == sideB || sideA == sideC || sideB == sideC;
     }
 }
