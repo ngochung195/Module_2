@@ -1,0 +1,3 @@
+Prompt 1: Sự đánh đổi giữa Thời gian (Time) và Không gian (Space) trong thiết kế thuật toán là gì? Tại sao việc dùng HashSet lại làm thuật toán chạy nhanh hơn nhưng tốn nhiều RAM hơn so với mảng thông thường?
+
+Prompt 2: Hãy giải thích tại sao khi kích thước mảng đầu vào tăng lên gấp đôi (từ 100k lên 200k), thuật toán  O(n^2)  lại tốn thời gian chạy tăng lên gấp 4 lần, trong khi thuật toán  O(n)  chỉ tăng khoảng gấp 2 lần?
