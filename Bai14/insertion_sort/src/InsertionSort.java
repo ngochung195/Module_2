@@ -10,11 +10,18 @@ public class InsertionSort {
             pos = i;
 
             while (pos > 0 && x < list[pos - 1]) {
+                System.out.println("Dich " + list[pos - 1] + " sang phai vao vi tri " + pos);
                 list[pos] = list[pos - 1];
                 pos--;
             }
-
+            System.out.println("Chen " + x + " vao vi tri " + pos);
             list[pos] = x;
+
+            System.out.println("Sau luot sap xep thu " + i + " la: ");
+            for (int num : list) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
         }
     }
 
