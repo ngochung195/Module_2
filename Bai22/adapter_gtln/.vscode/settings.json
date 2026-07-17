@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "Bai8/calculate/lib/**/*.jar",
+        "java-adapter-collection/lib/java-collection-utils.jar"
+    ]
+}
