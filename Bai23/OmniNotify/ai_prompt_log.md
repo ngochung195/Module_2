@@ -1,0 +1,1 @@
+Prompt: Nguyên lý Open/Closed (OCP) có nghĩa là 'Mở cho việc mở rộng, Đóng cho việc sửa đổi'. Dựa trên cách tôi vừa tách các Sender thành class riêng, hệ thống của tôi đã thỏa mãn hoàn toàn OCP chưa?
