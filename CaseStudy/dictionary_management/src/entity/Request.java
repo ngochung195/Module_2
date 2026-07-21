@@ -1,14 +1,25 @@
 package entity;
 
 public class Request {
+
+    private String command;
+
     private String keyword;
 
     public Request() {
-
     }
 
-    public Request(String keyword) {
+    public Request(String command, String keyword) {
+        this.command = command;
         this.keyword = keyword;
+    }
+
+    public String getCommand() {
+        return command;
+    }
+
+    public void setCommand(String command) {
+        this.command = command;
     }
 
     public String getKeyword() {
@@ -21,6 +32,6 @@ public class Request {
 
     @Override
     public String toString() {
-        return keyword;
+        return command + " " + keyword;
     }
 }

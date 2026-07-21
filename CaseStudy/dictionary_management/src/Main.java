@@ -1,3 +1,4 @@
+import controller.DictionaryController;
 import entity.Word;
 import service.DictionaryService;
 
@@ -13,12 +14,14 @@ public class Main {
         service.define(banana);
         service.define(cat);
 
-        System.out.println(service.lookup("cat"));
+        DictionaryController controller = new DictionaryController();
 
-        service.export();
+        controller.execute("lookup apple");
 
-        service.drop("cat");
+        controller.execute("drop banana");
 
-        System.out.println(service.lookup("cat"));
+        controller.execute("lookup banana");
+
+        controller.execute("export");
     }
 }
