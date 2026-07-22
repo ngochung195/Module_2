@@ -1,48 +1,38 @@
 package controller;
 
-import entity.Request;
+import java.util.List;
+
 import entity.Word;
 import service.DictionaryService;
-import util.RequestParser;
 
 public class DictionaryController {
     private final DictionaryService service;
-    private final RequestParser parser;
 
     public DictionaryController() {
         service = DictionaryService.getInstance();
-        parser = new RequestParser();
     }
 
-    public void execute(String input) {
-        Request request = parser.parser(input);
+    public Word lookup(String keyword) {
+        return service.lookup(keyword);
+    }
 
-        switch (request.getCommand()) {
-            case "lookup":
-                System.out.println(service.lookup(request.getKeyword()));
-                break;
-            case "define":
-                // Tạm thời tạo Word chỉ với keyword
-                // Sau này sẽ bổ sung nghĩa, phát âm,...
-                service.define(new Word(request.getKeyword(), ""));
-                System.out.println("Define success.");
-                break;
-            case "drop":
-                System.out.println(service.drop(request.getKeyword()));
-                break;
-            case "export":
-                service.export();
-                break;
+    public void define(Word word) {
+        service.define(word);
+    }
 
-            case "load":
-                service.load();
-                break;
+    public boolean drop(String keyword) {
+        return service.drop(keyword);
+    }
 
-            case "save":
-                service.save();
-                break;
-            default:
-                System.out.println("Unknown command.");
-        }
+    public List<Word> findAll() {
+        return service.findAll();
+    }
+
+    public void load() {
+        service.load();
+    }
+
+    public void save() {
+        service.save();
     }
 }

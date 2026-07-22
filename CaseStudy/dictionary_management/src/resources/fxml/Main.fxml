@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="javafxcontroller.MainController"
+            stylesheets="@../css/style.css"
+            prefWidth="900.0" prefHeight="650.0">
+
+    <top>
+        <VBox spacing="15" alignment="CENTER" styleClass="header-bar">
+            <padding><Insets top="25" right="20" bottom="25" left="20"/></padding>
+
+            <Label text="📖 TỪ ĐIỂN ANH - VIỆT" styleClass="title"/>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Từ cần tra:" styleClass="search-label"/>
+                <TextField fx:id="txtSearch"
+                           prefWidth="350"
+                           promptText="Nhập từ tiếng Anh..."/>
+                <Button fx:id="btnLookup"
+                        text="Tra cứu"
+                        onAction="#lookup"
+                        styleClass="btn-lookup"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="15">
+            <padding><Insets top="20" right="20" bottom="10" left="20"/></padding>
+
+            <GridPane hgap="10" vgap="10" styleClass="result-card">
+                <columnConstraints>
+                    <ColumnConstraints minWidth="100"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <Label text="Từ:" styleClass="field-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Label fx:id="lblWord" text="..." GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Phiên âm:" styleClass="field-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <Label fx:id="lblPronunciation" text="..." GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <Label text="Nội dung" styleClass="section-title"/>
+            <TextArea fx:id="txtContent"
+                    editable="false"
+                    wrapText="true"
+                    prefHeight="330"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="20" alignment="CENTER" styleClass="bottom-bar">
+            <padding><Insets top="18" right="20" bottom="20" left="20"/></padding>
+
+            <Button fx:id="btnDefine"
+                    text="Thêm từ"
+                    prefWidth="130"
+                    onAction="#define"
+                    styleClass="btn-define"/>
+
+            <Button fx:id="btnDrop"
+                    text="Xóa từ"
+                    prefWidth="130"
+                    onAction="#drop"
+                    styleClass="btn-drop"/>
+
+            <Button fx:id="btnExport"
+                    text="Xuất dữ liệu"
+                    prefWidth="130"
+                    onAction="#export"
+                    styleClass="btn-export"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

@@ -1,7 +1,12 @@
 package service;
 
+import java.util.List;
+
 import entity.Word;
 import repository.DictionaryRepository;
+import entity.Definition;
+import entity.DefinitionType;
+import entity.Sentence;
 
 public class DictionaryService {
     private static DictionaryService instance;
@@ -10,6 +15,41 @@ public class DictionaryService {
 
     private DictionaryService() {
         repository = new DictionaryRepository();
+
+        initData();
+    }
+
+    private void initData() {
+
+        Word positive = new Word("positive", "ˈpɒzətɪv");
+
+        // Definition 1
+        Definition adjective = new Definition(
+                "tích cực",
+                DefinitionType.ADJECTIVE);
+
+        adjective.addSentence(new Sentence(
+                "She has a positive attitude.",
+                "Cô ấy có thái độ tích cực."));
+
+        adjective.addSentence(new Sentence(
+                "Positive thinking helps you succeed.",
+                "Suy nghĩ tích cực giúp bạn thành công."));
+
+        positive.addDefinition(adjective);
+
+        // Definition 2
+        Definition noun = new Definition(
+                "điều tích cực",
+                DefinitionType.NOUN);
+
+        noun.addSentence(new Sentence(
+                "Let's focus on the positives.",
+                "Hãy tập trung vào những điều tích cực."));
+
+        positive.addDefinition(noun);
+
+        repository.add(positive);
     }
 
     public static DictionaryService getInstance() {
@@ -25,6 +65,9 @@ public class DictionaryService {
     }
 
     public void define(Word word) {
+        if (word == null) {
+            return;
+        }
         repository.add(word);
     }
 
@@ -32,10 +75,8 @@ public class DictionaryService {
         return repository.remove(keyword);
     }
 
-    public void export() {
-        for (Word word : repository.findAll()) {
-            System.out.println(word);
-        }
+    public List<Word> findAll() {
+        return repository.findAll();
     }
 
     // Doc du lieu file

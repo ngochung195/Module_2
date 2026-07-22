@@ -1,8 +1,12 @@
 package entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Definition {
     private String meaning;
     private DefinitionType type;
+    private List<Sentence> sentences = new ArrayList<>();
 
     public Definition() {
 
@@ -27,6 +31,18 @@ public class Definition {
 
     public void setType(DefinitionType type) {
         this.type = type;
+    }
+
+    public List<Sentence> getSentences() {
+        return sentences;
+    }
+
+    public void setSentences(List<Sentence> sentences) {
+        this.sentences = sentences;
+    }
+
+    public void addSentence(Sentence sentence) {
+        sentences.add(sentence);
     }
 
     @Override
