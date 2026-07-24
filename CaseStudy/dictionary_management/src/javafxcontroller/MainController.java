@@ -8,6 +8,11 @@ import controller.DictionaryController;
 import entity.Definition;
 import entity.Sentence;
 import entity.Word;
+import factory.HandlerFactory;
+import handler.DefineHandler;
+import handler.DropHandler;
+import handler.ExportHandler;
+import handler.LookupHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -38,12 +43,13 @@ public class MainController {
     @FXML
     private TextArea txtContent;
 
+    private final DictionaryController controller = new DictionaryController();
+
+    private HandlerFactory handlerFactory;
+
     // =========================
     // Business Controller
     // =========================
-
-    private final DictionaryController controller = new DictionaryController();
-
     public DictionaryController getController() {
         return controller;
     }
@@ -54,6 +60,10 @@ public class MainController {
 
     @FXML
     public void lookup() {
+        handlerFactory.getHandler("lookup").execute();
+    }
+
+    public void doLookup() {
         String keyword = txtSearch.getText().trim();
 
         if (keyword.isEmpty()) {
@@ -96,6 +106,10 @@ public class MainController {
 
     @FXML
     public void define() {
+        handlerFactory.getHandler("define").execute();
+    }
+
+    public void doDefine() {
 
         try {
 
@@ -125,6 +139,10 @@ public class MainController {
 
     @FXML
     public void drop() {
+        handlerFactory.getHandler("drop").execute();
+    }
+
+    public void doDrop() {
 
         String keyword = lblWord.getText();
 
@@ -187,6 +205,10 @@ public class MainController {
 
     @FXML
     public void export() {
+        handlerFactory.getHandler("export").execute();
+    }
+
+    public void doExport() {
         controller.export();
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -207,4 +229,26 @@ public class MainController {
         txtContent.clear();
     }
 
+    @FXML
+    public void initialize() {
+
+        handlerFactory = new HandlerFactory();
+
+        handlerFactory.register(
+                "lookup",
+                new LookupHandler(this));
+
+        handlerFactory.register(
+                "define",
+                new DefineHandler(this));
+
+        handlerFactory.register(
+                "drop",
+                new DropHandler(this));
+
+        handlerFactory.register(
+                "export",
+                new ExportHandler(this));
+
+    }
 }
