@@ -5,3 +5,26 @@ VÍ_DỤ|Positive thinking helps you succeed.|Suy nghĩ tích cực giúp bạn 
 NGHĨA|Danh từ (noun)|điều tích cực
 VÍ_DỤ|Let's focus on the positives.|Hãy tập trung vào những điều tích cực.
 ----------------------------------------
+TỪ|computer|kəmˈpjuːtə
+NGHĨA|Danh từ (noun)|máy tính
+----------------------------------------
+TỪ|positive|ˈpɒzətɪv
+NGHĨA|Tính từ (adjective)|tích cực
+VÍ_DỤ|She has a positive attitude.|Cô ấy có thái độ tích cực.
+VÍ_DỤ|Positive thinking helps you succeed.|Suy nghĩ tích cực giúp bạn thành công.
+NGHĨA|Danh từ (noun)|điều tích cực
+VÍ_DỤ|Let's focus on the positives.|Hãy tập trung vào những điều tích cực.
+----------------------------------------
+TỪ|computer|kəmˈpjuːtə
+NGHĨA|Danh từ (noun)|máy tính
+----------------------------------------
+TỪ|positive|ˈpɒzətɪv
+NGHĨA|Tính từ (adjective)|tích cực
+VÍ_DỤ|She has a positive attitude.|Cô ấy có thái độ tích cực.
+VÍ_DỤ|Positive thinking helps you succeed.|Suy nghĩ tích cực giúp bạn thành công.
+NGHĨA|Danh từ (noun)|điều tích cực
+VÍ_DỤ|Let's focus on the positives.|Hãy tập trung vào những điều tích cực.
+----------------------------------------
+TỪ|computer|kəmˈpjuːtə
+NGHĨA|Danh từ (noun)|máy tính
+----------------------------------------
