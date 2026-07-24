@@ -1,8 +1,12 @@
 package entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Word {
     private String word;
     private String pronunciation;
+    private List<Definition> definitions = new ArrayList<>();
 
     public Word() {
 
@@ -27,6 +31,20 @@ public class Word {
 
     public void setPronunciation(String pronunciation) {
         this.pronunciation = pronunciation;
+    }
+
+    public List<Definition> getDefinitions() {
+        return definitions;
+    }
+
+    public void setDefinitions(List<Definition> definitions) {
+        this.definitions = definitions;
+    }
+
+    public void addDefinition(Definition definition) {
+
+        definitions.add(definition);
+
     }
 
     @Override

@@ -1,0 +1,198 @@
+/* ===================== ROOT & TYPOGRAPHY ===================== */
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: linear-gradient(to bottom right, #eef2f7, #f8fafc);
+}
+
+.label {
+    -fx-text-fill: #2c3e50;
+}
+
+/* ===================== HEADER ===================== */
+.title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 4, 0, 0, 2);
+}
+
+.header-bar {
+    -fx-background-color: linear-gradient(to right, #1565c0, #1e88e5, #42a5f5);
+    -fx-background-radius: 0 0 16 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 3);
+}
+
+.search-label {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* ===================== BUTTONS THEO MÀU RIÊNG ===================== */
+.button {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8;
+    -fx-padding: 9 20;
+    -fx-cursor: hand;
+}
+
+/* Tra cứu */
+.btn-lookup {
+    -fx-background-color: linear-gradient(to bottom, #42a5f5, #1565c0);
+    -fx-effect: dropshadow(gaussian, rgba(21, 101, 192, 0.45), 8, 0, 0, 3);
+}
+
+.btn-lookup:hover {
+    -fx-background-color: linear-gradient(to bottom, #64b5f6, #1976d2);
+}
+
+.btn-lookup:pressed {
+    -fx-background-color: #0d47a1;
+    -fx-translate-y: 1;
+}
+
+/* Thêm từ */
+.btn-define {
+    -fx-background-color: linear-gradient(to bottom, #66bb6a, #2e7d32);
+    -fx-effect: dropshadow(gaussian, rgba(46, 125, 50, 0.45), 8, 0, 0, 3);
+}
+
+.btn-define:hover {
+    -fx-background-color: linear-gradient(to bottom, #81c784, #388e3c);
+}
+
+.btn-define:pressed {
+    -fx-background-color: #1b5e20;
+    -fx-translate-y: 1;
+}
+
+/* Xuất dữ liệu */
+.btn-export {
+    -fx-background-color: linear-gradient(to bottom, #ffa726, #ef6c00);
+    -fx-effect: dropshadow(gaussian, rgba(239, 108, 0, 0.45), 8, 0, 0, 3);
+}
+
+.btn-export:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffb74d, #f57c00);
+}
+
+.btn-export:pressed {
+    -fx-background-color: #e65100;
+    -fx-translate-y: 1;
+}
+
+/* Xóa từ */
+.btn-drop {
+    -fx-background-color: linear-gradient(to bottom, #ef5350, #c62828);
+    -fx-effect: dropshadow(gaussian, rgba(198, 40, 40, 0.45), 8, 0, 0, 3);
+}
+
+.btn-drop:hover {
+    -fx-background-color: linear-gradient(to bottom, #e57373, #d32f2f);
+}
+
+.btn-drop:pressed {
+    -fx-background-color: #8e0000;
+    -fx-translate-y: 1;
+}
+
+/* ===================== Ô NHẬP ===================== */
+.text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: transparent;
+    -fx-padding: 8 16;
+    -fx-prompt-text-fill: #9aa5b1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0, 0, 1);
+}
+
+.text-field:focused {
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.6), 8, 0, 0, 0);
+}
+
+/* ===================== CARD KẾT QUẢ (GridPane) ===================== */
+.result-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 16 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 8, 0, 0, 2);
+}
+
+/* Giá trị "Từ" tra được */
+#lblWord {
+    -fx-font-size: 22px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0d47a1;
+}
+
+/* Giá trị "Phiên âm" */
+#lblPronunciation {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-text-fill: #1976d2;
+}
+
+/* Nhãn tĩnh "Từ:" và "Phiên âm:" — đậm, cỡ 20 */
+.field-label {
+    -fx-font: bold 20px "Segoe UI";
+    -fx-text-fill: #546e7a;
+}
+
+/* ===================== TIÊU ĐỀ "Nội dung" ===================== */
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #37474f;
+    -fx-padding: 4 0 0 4;
+}
+
+/* ===================== Ô NỘI DUNG (nghĩa, ví dụ...) ===================== */
+.text-area {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #dde3ea;
+    -fx-border-width: 1.5;
+    -fx-font-family: "Consolas", monospace;
+    -fx-font-size: 14px;
+}
+
+.text-area .content {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+}
+
+.text-area:focused {
+    -fx-border-color: #1976d2;
+}
+
+/* ===================== NỀN KHU VỰC DƯỚI (nút bấm) ===================== */
+.bottom-bar {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.06), 8, 0, 0, -2);
+}
+
+/* ===================== SCROLLBAR ===================== */
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #b0bec5;
+    -fx-background-radius: 6;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #90a4ae;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}

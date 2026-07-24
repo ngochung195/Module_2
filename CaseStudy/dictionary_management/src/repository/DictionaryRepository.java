@@ -17,12 +17,20 @@ public class DictionaryRepository {
     }
 
     public void add(Word word) {
-        dictionary.put(word.getWord(), word);
+        if (word == null) {
+            return;
+        }
+
+        String key = word.getWord().toLowerCase();
+
+        dictionary.put(key, word);
         words.add(word);
     }
 
     public boolean remove(String keyword) {
-        Word removed = dictionary.remove(keyword);
+        String key = keyword.toLowerCase();
+
+        Word removed = dictionary.remove(key);
 
         if (removed != null) {
             words.remove(removed);
@@ -33,10 +41,10 @@ public class DictionaryRepository {
     }
 
     public Word find(String keyword) {
-        return dictionary.get(keyword);
+        return dictionary.get(keyword.toLowerCase());
     }
 
     public List<Word> findAll() {
-        return words;
+        return new LinkedList<>(words);
     }
 }

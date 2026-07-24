@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "D:/Application/Java/JavaFX/openjfx-17.0.19_windows-x64_bin-sdk/javafx-sdk-17.0.19/lib/*.jar"
+    ]
+}

@@ -1,0 +1,131 @@
+/* ===================== ROOT ===================== */
+
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: linear-gradient(to bottom right, #eef7ee, #f8fbf8);
+}
+
+/* ===================== HEADER ===================== */
+
+.header-bar {
+    -fx-background-color: linear-gradient(to right, #2e7d32, #43a047, #66bb6a);
+    -fx-background-radius: 0 0 16 16;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.18), 10, 0, 0, 3);
+}
+
+.title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* ===================== LABEL ===================== */
+
+.field-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #37474f;
+}
+
+/* ===================== INPUT ===================== */
+
+.text-field,
+.combo-box,
+.text-area {
+
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #cfd8dc;
+    -fx-border-width: 1.2;
+
+}
+
+.text-field,
+.combo-box {
+
+    -fx-padding: 8 10;
+
+}
+
+.text-area {
+
+    -fx-font-size: 14px;
+
+}
+
+.text-area .content {
+
+    -fx-background-color: white;
+
+}
+
+.text-field:focused,
+.combo-box:focused,
+.text-area:focused {
+
+    -fx-border-color: #43a047;
+
+}
+
+/* ===================== BUTTON ===================== */
+
+.button {
+
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+
+}
+
+/* Lưu */
+
+.btn-define {
+
+    -fx-background-color: linear-gradient(to bottom, #66bb6a, #2e7d32);
+
+}
+
+.btn-define:hover {
+
+    -fx-background-color: linear-gradient(to bottom, #81c784, #388e3c);
+
+}
+
+.btn-define:pressed {
+
+    -fx-background-color: #1b5e20;
+
+}
+
+/* Hủy */
+
+.btn-drop {
+
+    -fx-background-color: linear-gradient(to bottom, #ef5350, #c62828);
+
+}
+
+.btn-drop:hover {
+
+    -fx-background-color: linear-gradient(to bottom, #e57373, #d32f2f);
+
+}
+
+.btn-drop:pressed {
+
+    -fx-background-color: #8e0000;
+
+}
+
+/* ===================== FOOTER ===================== */
+
+.bottom-bar {
+
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.06), 8, 0, 0, -2);
+
+}

@@ -1,27 +1,29 @@
-import controller.DictionaryController;
-import entity.Word;
-import service.DictionaryService;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
+public class Main extends Application {
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        System.out.println(getClass().getResource("/resources/fxml/Main.fxml"));
+
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("/resources/fxml/Main.fxml"));
+
+        Scene scene = new Scene(loader.load());
+
+        stage.setTitle("Từ điển Anh - Việt");
+
+        stage.setScene(scene);
+
+        stage.show();
+    }
+
     public static void main(String[] args) {
-        DictionaryService service = DictionaryService.getInstance();
 
-        Word apple = new Word("apple", "ˈæpl");
-        Word banana = new Word("banana", "bəˈnɑːnə");
-        Word cat = new Word("cat", "kæt");
+        launch(args);
 
-        service.define(apple);
-        service.define(banana);
-        service.define(cat);
-
-        DictionaryController controller = new DictionaryController();
-
-        controller.execute("lookup apple");
-
-        controller.execute("drop banana");
-
-        controller.execute("lookup banana");
-
-        controller.execute("export");
     }
 }
