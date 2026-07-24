@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="javafxcontroller.DefineController"
+            prefWidth="550"
+            prefHeight="520"
+            stylesheets="@../css/define.css">
+
+    <top>
+        <VBox alignment="CENTER" styleClass="header-bar">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="➕ THÊM TỪ MỚI"
+                   styleClass="title"/>
+        </VBox>
+    </top>
+
+    <center>
+
+        <GridPane hgap="10" vgap="15">
+
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <columnConstraints>
+                <ColumnConstraints minWidth="130"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <Label text="Từ:"
+                styleClass="field-label"
+                GridPane.rowIndex="0"/>
+
+            <TextField fx:id="txtWord"
+                    promptText="Nhập từ tiếng Anh..."
+                    GridPane.rowIndex="0"
+                    GridPane.columnIndex="1"/>
+
+            <Label text="Phiên âm:"
+                styleClass="field-label"
+                GridPane.rowIndex="1"/>
+
+            <TextField fx:id="txtPronunciation"
+                    promptText="Ví dụ: /ˈpɒzətɪv/"
+                    GridPane.rowIndex="1"
+                    GridPane.columnIndex="1"/>
+
+            <Label text="Loại từ:"
+                styleClass="field-label"
+                GridPane.rowIndex="2"/>
+
+            <ComboBox fx:id="cbType"
+                    prefWidth="220"
+                    GridPane.rowIndex="2"
+                    GridPane.columnIndex="1"/>
+
+            <Label text="Nghĩa:"
+                styleClass="field-label"
+                GridPane.rowIndex="3"/>
+
+            <TextArea fx:id="txtMeaning"
+                    promptText="Nhập nghĩa tiếng Việt..."
+                    wrapText="true"
+                    prefRowCount="4"
+                    GridPane.rowIndex="3"
+                    GridPane.columnIndex="1"/>
+
+            <Label text="Ví dụ (Tiếng Anh):"
+                styleClass="field-label"
+                GridPane.rowIndex="4"/>
+
+            <TextArea fx:id="txtEnglish"
+                    promptText="Nhập câu ví dụ tiếng Anh..."
+                    wrapText="true"
+                    prefRowCount="2"
+                    GridPane.rowIndex="4"
+                    GridPane.columnIndex="1"/>
+
+            <Label text="Ví dụ (Tiếng Việt):"
+                styleClass="field-label"
+                GridPane.rowIndex="5"/>
+
+            <TextArea fx:id="txtVietnamese"
+                    promptText="Nhập nghĩa tiếng Việt của câu ví dụ..."
+                    wrapText="true"
+                    prefRowCount="2"
+                    GridPane.rowIndex="5"
+                    GridPane.columnIndex="1"/>
+
+        </GridPane>
+
+    </center>
+
+    <bottom>
+
+        <HBox spacing="20"
+              alignment="CENTER"
+              styleClass="bottom-bar">
+
+            <padding>
+                <Insets top="15" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Button text="Lưu"
+                    fx:id="btnSave"
+                    styleClass="btn-define"
+                    onAction="#save"/>
+
+            <Button text="Hủy"
+                    fx:id="btnCancel"
+                    styleClass="btn-drop"
+                    onAction="#cancel"/>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>

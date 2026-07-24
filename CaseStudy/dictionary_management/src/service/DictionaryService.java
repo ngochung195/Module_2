@@ -64,11 +64,17 @@ public class DictionaryService {
         return repository.find(keyword);
     }
 
-    public void define(Word word) {
+    public boolean define(Word word) {
         if (word == null) {
-            return;
+            return false;
         }
+
+        if (repository.find(word.getWord()) != null) {
+            return false;
+        }
+
         repository.add(word);
+        return true;
     }
 
     public boolean drop(String keyword) {
@@ -86,6 +92,5 @@ public class DictionaryService {
 
     // Ghi du lieu file
     public void save() {
-
     }
 }

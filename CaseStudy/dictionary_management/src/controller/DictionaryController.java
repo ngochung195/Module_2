@@ -16,8 +16,8 @@ public class DictionaryController {
         return service.lookup(keyword);
     }
 
-    public void define(Word word) {
-        service.define(word);
+    public boolean define(Word word) {
+        return service.define(word);
     }
 
     public boolean drop(String keyword) {

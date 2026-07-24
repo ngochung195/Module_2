@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class MainController {
@@ -92,21 +93,31 @@ public class MainController {
 
     @FXML
     public void define() {
+
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/fxml/Define.fxml"));
+
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/resources/fxml/Define.fxml"));
 
             Parent root = loader.load();
 
-            DefineController defineController = loader.getController();
-            defineController.setController(controller);
-
             Stage stage = new Stage();
-            stage.setTitle("Define");
+            stage.setTitle("Thêm từ mới");
+
             stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
+
+            stage.initModality(Modality.APPLICATION_MODAL);
+
+            stage.setResizable(false);
+
+            stage.showAndWait();
+
+        } catch (Exception e) {
+
             e.printStackTrace();
+
         }
+
     }
 
     @FXML
