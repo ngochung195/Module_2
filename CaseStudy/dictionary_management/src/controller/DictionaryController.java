@@ -35,4 +35,8 @@ public class DictionaryController {
     public void save() {
         service.save();
     }
+
+    public void export() {
+        service.export();
+    }
 }

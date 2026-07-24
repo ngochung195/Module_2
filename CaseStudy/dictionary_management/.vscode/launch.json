@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StorageTest",
+            "request": "launch",
+            "mainClass": "test.StorageTest",
+            "projectName": "dictionary_management_4bea7f33"
+        },
+        {
+            "type": "java",
             "name": "Run JavaFX",
             "request": "launch",
             "mainClass": "Main",

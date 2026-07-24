@@ -101,6 +101,17 @@ public class DefineController {
             return;
         }
 
+        if (pronunciation.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Thiếu thông tin");
+            alert.setHeaderText(null);
+            alert.setContentText("Vui lòng nhập phiên âm.");
+            alert.showAndWait();
+
+            txtPronunciation.requestFocus();
+            return;
+        }
+
         if (meaning.isEmpty()) {
 
             Alert alert = new Alert(Alert.AlertType.WARNING);

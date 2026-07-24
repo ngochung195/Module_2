@@ -4,19 +4,27 @@ import java.util.List;
 
 import entity.Word;
 import repository.DictionaryRepository;
+import storage.DictionaryStorage;
 import entity.Definition;
 import entity.DefinitionType;
 import entity.Sentence;
 
 public class DictionaryService {
     private static DictionaryService instance;
-
     private final DictionaryRepository repository;
+    private final DictionaryStorage storage = new DictionaryStorage();
 
     private DictionaryService() {
         repository = new DictionaryRepository();
 
-        initData();
+        load();
+
+        if (repository.findAll().isEmpty()) {
+
+            initData();
+
+            save();
+        }
     }
 
     private void initData() {
@@ -74,23 +82,38 @@ public class DictionaryService {
         }
 
         repository.add(word);
+
+        save();
         return true;
     }
 
     public boolean drop(String keyword) {
-        return repository.remove(keyword);
+        boolean result = repository.remove(keyword);
+
+        if (result) {
+            save();
+        }
+
+        return result;
     }
 
     public List<Word> findAll() {
         return repository.findAll();
     }
 
-    // Doc du lieu file
     public void load() {
+        List<Word> words = storage.load();
 
+        for (Word word : words) {
+            repository.add(word);
+        }
     }
 
-    // Ghi du lieu file
     public void save() {
+        storage.save(repository.findAll());
+    }
+
+    public void export() {
+        storage.export(repository.findAll());
     }
 }
